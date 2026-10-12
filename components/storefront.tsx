@@ -70,7 +70,25 @@ export function Storefront() {
 
         <section className="newsletter"><div className="container newsletter-inner"><div><span className="eyebrow">El correo más bonito de tu bandeja</span><h2>Ideas, ofertas y <em>cosas bonitas.</em></h2></div><form className="newsletter-form" onSubmit={(event) => { event.preventDefault(); setNotice("¡Gracias! Suscripción simulada para el proyecto académico."); setTimeout(() => setNotice(""), 4000); }}><input placeholder="Tu correo electrónico" aria-label="Correo para novedades" type="email" required /><button type="submit" className="button button-dark">Suscribirme <Icon name="ArrowRight" size={16} /></button><small>Suscripción de demostración académica.</small></form></div></section>
       </main>
-      <footer className="site-footer"><div className="container footer-grid"><div><div className="brand footer-brand"><img className="pycca-logo" src={withBasePath(site.logo)} alt={site.name} width="150" height="48" /></div><p>Diseño para disfrutar la vida,<br />todos los días.</p></div><div><strong>Comprar</strong><a href="#featured">Novedades</a><a href="#featured">Más vendidos</a><a href="#categories">Categorías</a><a href="#featured">Ofertas</a></div><div><strong>Ayuda</strong><a href="#">Preguntas frecuentes</a><a href="#">Envíos y devoluciones</a><Link href="/tiendas">Encuentra una tienda</Link><a href="#">Contáctanos</a></div><div><strong>PYCCA</strong><a href="#">Nuestra historia</a><a href="#">Trabaja con nosotros</a><a href="#">Club PYCCA</a><a href="#">Sostenibilidad</a></div></div><div className="container footer-bottom"><span>© 2026 · Proyecto universitario. Catálogo y compras simulados.</span><span className="academic-reference">Proyecto académico inspirado en <Image src={withBasePath("/brand/pycca-logo.svg")} alt="PYCCA" width={72} height={19} /></span><span>Privacidad · Términos · Ecuador</span></div></footer>
+      <footer className="site-footer">
+        <div className="container footer-grid">
+          <div className="footer-about">
+            <div className="brand footer-brand"><img className="pycca-logo" src={withBasePath(site.logo)} alt={site.name} width="150" height="48" /></div>
+            <p>Ideas para disfrutar la vida y hacer de cada espacio un lugar más tuyo.</p>
+            <span className="footer-project-tag"><Icon name="Sparkles" size={15} /> Proyecto académico SIGNEX</span>
+            <Link className="footer-signex-link" href="/signex">Conoce a SIGNEX y explora el proyecto <Icon name="ArrowRight" size={16} /></Link>
+          </div>
+          <div><strong>Explora</strong><a href="#featured">Productos destacados</a><a href="#categories">Categorías</a><Link href="/bebes">Espacio Bebés</Link><Link href="/buscar?q=">Buscar en el catálogo</Link></div>
+          <div><strong>Tu experiencia</strong><Link href="/cuenta">Mi cuenta de demostración</Link><Link href="/favoritos">Mis favoritos</Link><Link href="/tiendas">Puntos de retiro</Link><Link href="/checkout">Ver opciones de compra</Link></div>
+          <div><strong>Información</strong><a href="#demo-info">Sobre este proyecto</a><a href="#demo-info">Pagos y pedidos</a><a href="#demo-info">Datos y privacidad</a><Link href="/admin">Administración de la demo</Link></div>
+        </div>
+        <div className="container footer-info" id="demo-info">
+          <div><span className="footer-info-icon"><Icon name="Info" size={18} /></span><p><strong>Una experiencia académica</strong><span>Este sitio es un prototipo estudiantil inspirado en PYCCA; no es el canal oficial de la marca.</span></p></div>
+          <div><span className="footer-info-icon"><Icon name="CreditCard" size={18} /></span><p><strong>Compras de demostración</strong><span>Precios, promociones, pagos, inventario y pedidos son simulados y se guardan localmente en este navegador.</span></p></div>
+          <div><span className="footer-info-icon"><Icon name="MapPin" size={18} /></span><p><strong>Explora sin compromiso</strong><span>Consulta el catálogo y los puntos de retiro de ejemplo desde los accesos de esta página.</span></p></div>
+        </div>
+        <div className="container footer-bottom"><span>© 2026 SIGNEX · Prototipo universitario</span><span className="academic-reference">Identidad de PYCCA usada como referencia académica <Image src={withBasePath("/brand/pycca-logo.svg")} alt="PYCCA" width={72} height={19} /></span><span>Ecuador · Catálogo y operaciones simulados</span></div>
+      </footer>
       <BabyPromoPopup />
       {notice && <div className="toast"><Icon name="Check" size={16} /> {notice}</div>}
       <CartDrawer open={cartOpen} lines={cart} onClose={() => setCartOpen(false)} onChangeQuantity={updateQuantity} />
