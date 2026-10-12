@@ -384,6 +384,46 @@ em { font-family:inherit; font-style:normal; font-weight:700; }
 .baby-category .product-image-wrap,.baby-space .product-image-wrap{aspect-ratio:1.25;background:#F7F5EF}.baby-category .product-image,.baby-space .product-image{object-fit:contain}.baby-category .category-count{display:inline-block}.baby-hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:18px}.baby-hero-actions a{font-size:13px;color:#344c39;text-decoration:underline;text-underline-offset:4px}
 .baby-category .product-image,.baby-space .product-image{object-fit:contain}.baby-category .product-image-wrap,.baby-space .product-image-wrap{aspect-ratio:1.25}
 
+/* Baby campaign palette from the SIGNEX / PYCCA concept: clean white, warm beige,
+   sage, pastel yellow, light green and neutral gray. Scoped to baby experiences. */
+.baby-category,.baby-space{--baby-white:#fff;--baby-cream:#f7f3ea;--baby-beige:#d8c7af;--baby-sage:#87917d;--baby-sage-dark:#596653;--baby-green-light:#dce4d3;--baby-yellow:#f3d88c;--baby-gray:#747873;--baby-ink:#3e463b;--baby-border:#e3d9ca;color:var(--baby-ink)}
+.baby-category .category-hero,.baby-space-banner{background:var(--baby-cream);color:var(--baby-ink)}
+.baby-category .category-hero h1 em,.baby-space-copy h2 em{color:var(--baby-sage-dark)}
+.baby-category .category-hero-copy .eyebrow,.baby-space-copy .eyebrow{color:var(--baby-sage-dark)}
+.baby-category .category-hero-copy p,.baby-space-copy p{color:#5f665b}
+.baby-category .category-count{background:var(--baby-yellow);border-radius:999px;color:var(--baby-ink);padding:8px 13px}
+.baby-space{color:var(--baby-ink)}
+.baby-space-copy{background:var(--baby-cream);color:var(--baby-ink)}
+.baby-space-tags span{background:var(--baby-white);border-color:var(--baby-beige);color:var(--baby-ink)}
+.baby-space-heading h2 em{color:var(--baby-sage-dark)}
+.baby-category .category-product-grid .product-card,.baby-space .product-card{border-color:var(--baby-border);background:var(--baby-white)}
+.baby-category .product-image-wrap,.baby-space .product-image-wrap{background:var(--baby-cream)}
+.baby-category .baby-intro{color:var(--baby-gray)}
+.baby-category .baby-intro svg{color:var(--baby-sage-dark)}
+.baby-category .subcategory-scroll button.active{background:var(--baby-sage-dark);border-color:var(--baby-sage-dark);color:#fff}
+.baby-category .baby-planner h2{color:var(--baby-ink)}
+.baby-category .baby-story-grid article,.baby-category .baby-compare-grid article{background:var(--baby-cream);border-color:var(--baby-border);color:var(--baby-ink)}
+.baby-category .baby-checklist{background:var(--baby-green-light);color:var(--baby-ink)}
+.baby-category .baby-checklist label{background:var(--baby-white);border-color:var(--baby-border)}
+.baby-category .baby-checklist label:has(input:checked){background:#f8edcf;border-color:var(--baby-sage)}
+.baby-category .baby-planner input,.baby-category .baby-checklist progress{accent-color:var(--baby-sage-dark)}
+.baby-promo-backdrop{align-items:center;animation:baby-promo-fade .22s ease-out;background:rgba(27,32,26,.58);display:flex;inset:0;justify-content:center;padding:20px;position:fixed;z-index:120}
+.baby-promo-dialog{background:#fff;border:1px solid #e3d9ca;border-radius:22px;box-shadow:0 24px 80px rgba(20,27,22,.28);color:#3e463b;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);max-height:min(680px,calc(100dvh - 40px));max-width:850px;overflow:auto;position:relative;width:min(850px,100%)}
+.baby-promo-image{background:#f7f3ea;min-height:440px;position:relative}.baby-promo-image img{object-fit:cover}
+.baby-promo-copy{align-self:center;padding:clamp(26px,5vw,54px)}
+.baby-promo-close{align-items:center;background:rgba(255,255,255,.92);border:1px solid #e3d9ca;border-radius:50%;color:#3e463b;display:grid;height:42px;justify-content:center;position:absolute;right:14px;top:14px;width:42px;z-index:2}
+.baby-promo-close:hover{background:#f3d88c}
+.baby-promo-kicker{align-items:center;color:#596653;display:flex;font-size:10px;font-weight:600;gap:8px;letter-spacing:.12em}
+.baby-promo-copy h2{font-family:var(--font-poppins),sans-serif;font-size:clamp(27px,3.6vw,42px);font-weight:600;letter-spacing:-.055em;line-height:1.18;margin:22px 0 14px}
+.baby-promo-copy h2 em{color:#596653;font-family:inherit;font-style:normal;font-weight:600}
+.baby-promo-copy p{color:#62675f;font-size:14px;line-height:1.75;margin:0 0 22px}
+.baby-promo-cta{background:#596653;color:white;display:inline-flex;gap:12px;min-height:48px}
+.baby-promo-cta:hover{background:#414b3d}
+.baby-promo-copy small{color:#747873;display:block;font-size:10px;line-height:1.55;margin-top:17px;max-width:390px}
+@keyframes baby-promo-fade{from{opacity:0}to{opacity:1}}
+@media(max-width:700px){.baby-promo-backdrop{align-items:flex-end;padding:12px}.baby-promo-dialog{border-radius:20px;grid-template-columns:1fr;max-height:calc(100dvh - 24px);width:100%}.baby-promo-image{min-height:0;max-height:32dvh;aspect-ratio:1.8}.baby-promo-copy{padding:22px 22px max(22px,env(safe-area-inset-bottom))}.baby-promo-copy h2{font-size:29px;margin:14px 0 9px}.baby-promo-copy p{font-size:13px;margin-bottom:16px}.baby-promo-copy small{font-size:9px;margin-top:12px}.baby-promo-cta{min-height:48px;width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){.baby-promo-backdrop{animation:none}}
+
 /* Use the available desktop width instead of leaving ultrawide screens half empty. */
 @media (min-width: 1500px) {
   .container { width: min(2000px, calc(100% - clamp(48px, 6vw, 144px))); }
@@ -400,5 +440,6 @@ em { font-family:inherit; font-style:normal; font-weight:700; }
 .data-status-card h3 svg { color: var(--admin-brand); flex: 0 0 auto; }
 .data-status-card p { color: #687571; font-size: 11px; line-height: 1.6; margin: 0; max-width: 760px; }
 @media (max-width: 700px) { .data-status-card { align-items: flex-start; flex-direction: column; gap: 14px; } }
+
 
 

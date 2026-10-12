@@ -13,6 +13,7 @@ import { ProductCard } from './product-card';
 import { CartDrawer } from './cart-drawer';
 import { DepartmentRail } from './department-rail';
 import { BabySpace } from './baby-space';
+import { BabyPromoPopup } from './baby-promo-popup';
 import { useDemoProducts } from './use-demo-products';
 import { useDemoTheme } from './use-demo-theme';
 import { useCart } from './use-cart';
@@ -70,8 +71,10 @@ export function Storefront() {
         <section className="newsletter"><div className="container newsletter-inner"><div><span className="eyebrow">El correo más bonito de tu bandeja</span><h2>Ideas, ofertas y <em>cosas bonitas.</em></h2></div><form className="newsletter-form" onSubmit={(event) => { event.preventDefault(); setNotice("¡Gracias! Suscripción simulada para el proyecto académico."); setTimeout(() => setNotice(""), 4000); }}><input placeholder="Tu correo electrónico" aria-label="Correo para novedades" type="email" required /><button type="submit" className="button button-dark">Suscribirme <Icon name="ArrowRight" size={16} /></button><small>Suscripción de demostración académica.</small></form></div></section>
       </main>
       <footer className="site-footer"><div className="container footer-grid"><div><div className="brand footer-brand"><img className="pycca-logo" src={withBasePath(site.logo)} alt={site.name} width="150" height="48" /></div><p>Diseño para disfrutar la vida,<br />todos los días.</p></div><div><strong>Comprar</strong><a href="#featured">Novedades</a><a href="#featured">Más vendidos</a><a href="#categories">Categorías</a><a href="#featured">Ofertas</a></div><div><strong>Ayuda</strong><a href="#">Preguntas frecuentes</a><a href="#">Envíos y devoluciones</a><Link href="/tiendas">Encuentra una tienda</Link><a href="#">Contáctanos</a></div><div><strong>PYCCA</strong><a href="#">Nuestra historia</a><a href="#">Trabaja con nosotros</a><a href="#">Club PYCCA</a><a href="#">Sostenibilidad</a></div></div><div className="container footer-bottom"><span>© 2026 · Proyecto universitario. Catálogo y compras simulados.</span><span className="academic-reference">Proyecto académico inspirado en <Image src={withBasePath("/brand/pycca-logo.svg")} alt="PYCCA" width={72} height={19} /></span><span>Privacidad · Términos · Ecuador</span></div></footer>
+      <BabyPromoPopup />
       {notice && <div className="toast"><Icon name="Check" size={16} /> {notice}</div>}
       <CartDrawer open={cartOpen} lines={cart} onClose={() => setCartOpen(false)} onChangeQuantity={updateQuantity} />
     </div>
   );
 }
+
