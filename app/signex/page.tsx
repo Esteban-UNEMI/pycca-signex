@@ -183,12 +183,15 @@ export default function SignexPage() {
         <div className="container">
           <div className="signex-section-label"><span>08 / ARCHIVO DEL PROYECTO</span><i /></div>
           <div className="signex-doc-heading"><div><h2>Explora el trabajo<br /><em>de SIGNEX.</em></h2></div><p>Dossier, identidad, equipo y preproducción reunidos en un solo lugar.</p></div>
+          <Link className="signex-archive-link" href="/signex/documentos"><span><small>ARCHIVO ACADÉMICO</small><strong>Ver documentos y presentaciones dentro del sitio</strong><em>Dossier, guion, investigación y presentaciones para revisión docente.</em></span><Icon name="ArrowRight" size={20} /></Link>
           <div className="signex-doc-grid">{documents.map((doc) => <article className="signex-doc-card" key={doc.number}><div className="signex-doc-card-top"><span>{doc.eyebrow}</span><b>{doc.number}</b></div><h3>{doc.title}</h3><p>{doc.description}</p><a href={doc.href} target={doc.external ? '_blank' : undefined} rel={doc.external ? 'noreferrer' : undefined} download={doc.external ? undefined : true}>{doc.label}<Icon name={doc.external ? 'ArrowUpRight' : 'ArrowRight'} size={16} /></a></article>)}</div>
           <p className="signex-source-note">Los documentos de Google Drive pueden pedir acceso con la cuenta autorizada. Los archivos PPTX se descargan desde esta página y son editables.</p>
         </div>
       </section>
 
       <section className="signex-outro container"><span className="signex-kicker">SIGNEX × PYCCA</span><h2>Elige con confianza.<br /><em>Tu elección, su tranquilidad.</em></h2><Link className="signex-primary" href="/bebes">Ver el espacio Bebés <Icon name="ArrowRight" size={17} /></Link></section>
+      <footer className="signex-footer"><div className="container"><Link href="/signex">SIGNEX · Proyecto integrador</Link><span>Producción Multimedia y Audiovisual · UNEMI</span><Link href="/signex/documentos">Archivo de documentos para revisión docente <Icon name="ArrowRight" size={15} /></Link></div></footer>
     </main>
   );
 }
+

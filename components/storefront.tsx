@@ -77,6 +77,7 @@ export function Storefront() {
             <p>Ideas para disfrutar la vida y hacer de cada espacio un lugar más tuyo.</p>
             <span className="footer-project-tag"><Icon name="Sparkles" size={15} /> Proyecto académico SIGNEX</span>
             <Link className="footer-signex-link" href="/signex">Conoce a SIGNEX y explora el proyecto <Icon name="ArrowRight" size={16} /></Link>
+            <Link className="footer-signex-link footer-documents-link" href="/signex/documentos">Archivo para docentes: dossier y entregables <Icon name="ArrowRight" size={16} /></Link>
           </div>
           <div><strong>Explora</strong><a href="#featured">Productos destacados</a><a href="#categories">Categorías</a><Link href="/bebes">Espacio Bebés</Link><Link href="/buscar?q=">Buscar en el catálogo</Link></div>
           <div><strong>Tu experiencia</strong><Link href="/cuenta">Mi cuenta de demostración</Link><Link href="/favoritos">Mis favoritos</Link><Link href="/tiendas">Puntos de retiro</Link><Link href="/checkout">Ver opciones de compra</Link></div>
@@ -95,4 +96,5 @@ export function Storefront() {
     </div>
   );
 }
+
 
