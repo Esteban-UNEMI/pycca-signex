@@ -524,6 +524,24 @@ em { font-family:inherit; font-style:normal; font-weight:700; }
 .button,.icon-button,.favorite-button,.quick-add,.department-chip,.filter-tabs button { transition:transform .2s ease,background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease; }
 .search-box { transition:border-color .2s ease,box-shadow .2s ease; }
 
+/* Reveal editorial sections only as they enter view; content stays visible until JS is ready. */
+.motion-ready [data-reveal]:not(.is-revealed) {
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .62s cubic-bezier(.2,.7,.25,1),transform .62s cubic-bezier(.2,.7,.25,1);
+  will-change:opacity,transform;
+}
+.motion-ready [data-reveal].is-revealed {
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .62s cubic-bezier(.2,.7,.25,1),transform .62s cubic-bezier(.2,.7,.25,1);
+}
+.motion-ready .product-grid [data-reveal]:nth-child(2) { transition-delay:55ms; }
+.motion-ready .product-grid [data-reveal]:nth-child(3) { transition-delay:100ms; }
+.motion-ready .product-grid [data-reveal]:nth-child(4) { transition-delay:145ms; }
+.signex-primary svg,.baby-promo-cta svg { transition:transform .2s ease; }
+.signex-primary:hover svg,.baby-promo-cta:hover svg { transform:translateX(3px); }
+
 @keyframes pycca-rise-in {
   from { opacity:0; transform:translateY(16px); }
   to { opacity:1; transform:translateY(0); }
@@ -546,6 +564,8 @@ em { font-family:inherit; font-style:normal; font-weight:700; }
 }
 @media (prefers-reduced-motion:reduce) {
   .hero-copy,.hero-visual,.hero-copy .hero-eyebrow,.hero-copy h1,.hero-copy > p,.hero-copy .hero-actions,.hero-copy .hero-trust { animation:none; }
+  .motion-ready [data-reveal],.motion-ready [data-reveal].is-revealed { opacity:1; transform:none; transition:none; will-change:auto; }
+  .signex-primary svg,.baby-promo-cta svg { transition:none; }
 }
 
 /* Use the available desktop width instead of leaving ultrawide screens half empty. */

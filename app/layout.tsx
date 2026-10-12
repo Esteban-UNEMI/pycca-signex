@@ -3,6 +3,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 import { withBasePath } from '@/lib/site-path';
 import { ServiceWorkerRegister } from '@/components/service-worker-register';
+import { ScrollReveal } from '@/components/scroll-reveal';
 const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600'], display: 'swap', variable: '--font-poppins' });
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       </head>
       <body className={poppins.variable}>
         <ServiceWorkerRegister />
+        <ScrollReveal />
         {children}
       </body>
     </html>
