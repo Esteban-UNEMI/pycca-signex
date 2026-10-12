@@ -15,6 +15,23 @@ import { useDemoTheme } from './use-demo-theme';
 import { useCart } from './use-cart';
 import { BabyPlanner } from './baby-planner';
 
+function BabyHeroDoodles() {
+  return <div className="baby-hero-doodles" aria-hidden="true">
+    <svg className="baby-doodle baby-doodle-crib" viewBox="0 0 160 120" fill="none">
+      <path d="M24 45h112v55H24zM17 100h126M34 47V24h92v23M49 48v49M68 48v49M88 48v49M108 48v49M126 48v49M28 100l-5 11m109-11 5 11" />
+      <path d="M34 24c12-12 27-16 46-14 20 2 34 7 46 14M43 14c17-7 49-8 73 0" />
+      <path d="M53 25c5 4 8 8 9 14m40-14c-5 4-8 8-9 14" />
+    </svg>
+    <svg className="baby-doodle baby-doodle-stroller" viewBox="0 0 160 130" fill="none">
+      <path d="M45 39h58c18 0 29 13 29 30v3H60c-9 0-15-6-15-15V39Z" />
+      <path d="M48 39c7-20 22-29 42-29 20 0 35 10 44 29M55 72l18 32m42-31-17 31m-25 0h36" />
+      <circle cx="62" cy="111" r="9"/><circle cx="105" cy="111" r="9"/>
+      <path d="M47 38 35 31m68 9 15 10" />
+      <path d="M82 40v17m-9-9h18" />
+    </svg>
+  </div>;
+}
+
 export function CategoryPage({ department, products }: { department: Department; products: Product[] }) {
   const isBaby=department.slug==='bebes';
   const allProducts = useDemoProducts(products);
@@ -42,7 +59,7 @@ export function CategoryPage({ department, products }: { department: Department;
   const addToCart = (product:Product) => { setNotice(add(product) ? product.name+' se añadió a tu carrito' : 'No hay stock suficiente o no se pudo guardar el carrito.'); setTimeout(() => setNotice(''),2600); };
   return <div className={`category-page ${isBaby?'baby-category':''}`}><SiteHeader cartCount={cartCount} onCartOpen={() => setCartOpen(true)} theme={theme} onThemeToggle={() => setTheme(theme === 'light' ? 'dark' : 'light')} /><main>
     <div className="container breadcrumb"><Link href="/">Inicio</Link><Icon name="ChevronRight" size={13} />{department.name}</div>
-    <section className="category-hero container"><div className="category-hero-copy"><span className="eyebrow"><Icon name="Sparkles" size={14} /> {department.eyebrow}</span><h1>{isBaby?<>Elige con <em>confianza.</em></>:<>Todo para <em>{department.name.toLowerCase()}</em></>}</h1><p>{isBaby?'Tu elección, su tranquilidad. Conoce las opciones y comienza a preparar un espacio para su llegada.':'Encuentra piezas pensadas para acompañar tu vida, con entrega nacional y compra segura.'}</p><span className="category-count">{catalog.length} productos seleccionados</span></div><div className="category-hero-image"><Image src={withBasePath(department.image)} alt={department.name} fill sizes="(max-width: 700px) 100vw, 50vw" /></div></section>
+    <section className="category-hero container"><div className="category-hero-copy"><span className="eyebrow"><Icon name="Sparkles" size={14} /> {department.eyebrow}</span><h1>{isBaby?<>Elige con <em>confianza.</em></>:<>Todo para <em>{department.name.toLowerCase()}</em></>}</h1><p>{isBaby?'Tu elección, su tranquilidad. Conoce las opciones y comienza a preparar un espacio para su llegada.':'Encuentra piezas pensadas para acompañar tu vida, con entrega nacional y compra segura.'}</p><span className="category-count">{catalog.length} productos seleccionados</span></div><div className="category-hero-image"><Image src={withBasePath(department.image)} alt={department.name} fill sizes="(max-width: 700px) 100vw, 50vw" /></div>{isBaby&&<BabyHeroDoodles/>}</section>
     {isBaby&&<div className="container baby-intro"><span><Icon name="Heart" size={19}/> Pensado para sus primeros días</span><span><Icon name="Package" size={19}/> Cuatro modelos de cunas</span><span><Icon name="Info" size={19}/> Colección e imágenes académicas</span></div>}
     <section className="container subcategory-rail"><div className="subcategory-title"><span className="eyebrow">Explora dentro de {department.name}</span><span className="rail-hint"><Icon name="ArrowLeft" size={14} /> Desliza <Icon name="ArrowRight" size={14} /></span></div><div className="subcategory-scroll"><button className={subcategory === 'Todas' ? 'active' : ''} onClick={() => setSubcategory('Todas')}>Todas</button>{department.subcategories.map((item) => <button className={subcategory === item ? 'active' : ''} key={item} onClick={() => setSubcategory(item)}>{item}</button>)}</div></section>
     <section className="container category-listing"><div className="listing-toolbar"><div><span className="eyebrow">Catálogo PYCCA</span><h2>{subcategory === 'Todas' ? department.name : subcategory}</h2><p>{visibleProducts.length} resultados</p></div><div className="listing-actions"><div className="listing-search"><Icon name="Search" size={16} /><input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Buscar en esta categoría" /></div><select value={sort} onChange={(event) => setSort(event.target.value)} aria-label="Ordenar productos"><option>Recomendados</option><option>Precio menor</option><option>Precio mayor</option></select></div></div>{visibleProducts.length > 0 ? <div className="product-grid category-product-grid">{visibleProducts.map((product) => <ProductCard key={product.id} product={product} onAdd={addToCart} />)}</div> : <div className="category-empty"><Icon name="Search" size={26} /><h3>No encontramos ese producto</h3><p>Prueba con otro término o explora las subcategorías.</p></div>}</section>
