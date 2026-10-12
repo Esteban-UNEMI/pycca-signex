@@ -1,4 +1,5 @@
 'use client';
+import { withBasePath } from '@/lib/site-path';
 
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
@@ -49,14 +50,14 @@ export function SiteHeader({ cartCount, onCartOpen, theme, onThemeToggle }: Site
         <div className="container header-main">
           <button className="icon-button mobile-menu" onClick={() => setCategoriesOpen((open) => !open)} aria-label={categoriesOpen ? "Cerrar menú" : "Abrir menú"} aria-controls="category-mega-menu" aria-expanded={categoriesOpen}><Icon name={categoriesOpen ? "X" : "Menu"} /></button>
           <Link href="/" className="brand" aria-label={`${site.name} inicio`}>
-            <img className="pycca-logo" src={site.logo} alt={site.name} width="150" height="48" />
+            <img className="pycca-logo" src={withBasePath(site.logo)} alt={site.name} width="150" height="48" />
           </Link>
           <div className="header-search" onBlur={event=>{if(!event.currentTarget.contains(event.relatedTarget as Node))setSearchFocused(false);}}><form className="search-box" onSubmit={submitSearch} role="search">
             <Icon name="Search" size={19} />
             <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="¿Qué estás buscando hoy?" aria-label="Buscar productos" onFocus={()=>setSearchFocused(true)} aria-controls={searchFocused&&search.trim().length>=2?"search-suggestions":undefined} onKeyDown={event=>{if(event.key==='Escape')setSearchFocused(false);}} />
             <button type="submit">Buscar</button>
           </form>
-          {searchFocused&&search.trim().length>=2&&<div id="search-suggestions" className="search-suggestions" onPointerDown={event=>event.preventDefault()} aria-label="Sugerencias de productos">{suggestions.length?suggestions.map(p=><Link key={p.id} href={'/producto/'+p.id} onClick={()=>setSearchFocused(false)}><img src={p.image} alt=""/><span><strong>{p.name}</strong><small>{p.department} · {formatCurrency(p.price)}</small></span><Icon name="ArrowUpRight" size={15}/></Link>):<p>No encontramos coincidencias. Prueba otro nombre.</p>}<Link className="all-results" href={'/buscar?q='+encodeURIComponent(search.trim())} onClick={()=>setSearchFocused(false)}>Ver todos los resultados <Icon name="ArrowRight" size={15}/></Link></div>}</div>
+          {searchFocused&&search.trim().length>=2&&<div id="search-suggestions" className="search-suggestions" onPointerDown={event=>event.preventDefault()} aria-label="Sugerencias de productos">{suggestions.length?suggestions.map(p=><Link key={p.id} href={'/producto/'+p.id} onClick={()=>setSearchFocused(false)}><img src={withBasePath(p.image)} alt=""/><span><strong>{p.name}</strong><small>{p.department} · {formatCurrency(p.price)}</small></span><Icon name="ArrowUpRight" size={15}/></Link>):<p>No encontramos coincidencias. Prueba otro nombre.</p>}<Link className="all-results" href={'/buscar?q='+encodeURIComponent(search.trim())} onClick={()=>setSearchFocused(false)}>Ver todos los resultados <Icon name="ArrowRight" size={15}/></Link></div>}</div>
           <div className="header-actions">
             <button className="icon-button theme-toggle" onClick={onThemeToggle} aria-label="Cambiar tema">
               <Icon name={theme === 'light' ? 'Moon' : 'SunMedium'} size={19} />

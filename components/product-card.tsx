@@ -1,4 +1,5 @@
 'use client';
+import { withBasePath } from '@/lib/site-path';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,7 +18,7 @@ export function ProductCard({ product, onAdd }: ProductCardProps) {
       <div className="product-image-wrap">
         {product.badge && <span className={`product-badge ${product.badge.startsWith('-') || product.badge === 'Oferta' ? 'discount-badge' : ''}`}>{product.badge}</span>}
         <button className="favorite-button" aria-label={`${saved?'Quitar':'Añadir'} ${product.name} ${saved?'de':'a'} favoritos`} aria-pressed={saved} disabled={!ready} onClick={()=>toggle(product.id)}><Icon name="Heart" size={18} fill={saved?'currentColor':'none'} /></button>
-        <Link href={`/producto/${product.id}`} aria-label={`Ver ${product.name}`}><Image className="product-image" src={product.image} alt={product.name} fill sizes="(max-width: 700px) 50vw, 25vw" /></Link>
+        <Link href={`/producto/${product.id}`} aria-label={`Ver ${product.name}`}><Image className="product-image" src={withBasePath(product.image)} alt={product.name} fill sizes="(max-width: 700px) 50vw, 25vw" /></Link>
         <button className="quick-add" disabled={product.stock <= 0} onClick={() => onAdd(product)}><Icon name="ShoppingBag" size={16} /> {product.stock <= 0 ? 'Agotado' : 'Añadir'}</button>
       </div>
       <div className="product-info">

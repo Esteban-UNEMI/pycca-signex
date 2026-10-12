@@ -6,6 +6,10 @@ Los cambios del administrador, carrito, clientes, pedidos y progreso pertenecen 
 
 Supabase todavía no está conectado ni su SQL ejecutado. La configuración específica de PYCCA debe guardarse en `.env.local` ignorado por Git. Las claves públicas de Supabase están destinadas al cliente; ninguna clave administrativa debe llevar prefijo `NEXT_PUBLIC_` ni llegar al navegador. No reutilizar la base de otros proyectos.
 
-GitHub requiere conectar la cuenta o ejecutar `gh auth login` en el equipo. El repositorio local y el repositorio de fuentes de Sites son independientes de un futuro remoto GitHub. Crear el remoto GitHub privado y añadirlo solo después de verificar cuenta y ausencia de duplicados.
+## GitHub Pages
+
+El workflow `.github/workflows/deploy-pages.yml` compila y publica el sitio al hacer push a `main` (también se puede iniciar manualmente desde GitHub Actions). Para `Esteban-UNEMI/pycca-signex`, la URL esperada es `https://esteban-unemi.github.io/pycca-signex/`. En GitHub configura **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+
+Para actualizar la web, crea un commit y súbelo a `main`. Un commit que solo exista en el equipo no inicia el despliegue. GitHub Pages publica una exportación estática: los cambios del administrador guardados en el navegador siguen siendo locales a ese dispositivo, y para agregar rutas nuevas de producto/categoría se necesita volver a compilar y publicar. La persistencia compartida y Supabase siguen pendientes.
 
 Para activar un backend real: proyecto Supabase específico, autenticación y roles verificados en servidor, repositorios de catálogo y administración, políticas RLS y pruebas con usuarios de distintos roles. El esquema preparado es material de partida, no una garantía de permisos adecuados para producción.
