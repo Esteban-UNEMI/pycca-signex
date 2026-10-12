@@ -15,7 +15,7 @@ const subjects = [
     evidence: ['Documento de investigación PYCCA', 'Análisis de audiencia y contexto', 'Fuentes del cuestionario conservadas por versión'],
     next: ['Contrastar cada cifra con la hoja de respuestas original.', 'Acordar una sola base y documentar fecha, muestra y método.', 'Convertir los hallazgos validados en una síntesis breve para la exposición.'],
     links: [
-      { label: 'Ver investigación en el archivo', href: '/signex/documentos' },
+      { label: 'Ver investigación en el archivo', href: '/signex/documentos?doc=investigacion' },
       { label: 'Abrir documento de investigación', href: 'https://docs.google.com/document/d/1ksZbeKQZNE9Ykk4Q5rbqkuGE8zIq6MwbnumyV4ZYhoQ/edit', external: true },
     ],
     tone: 'clay', mark: 'Tc',
@@ -27,7 +27,7 @@ const subjects = [
     evidence: ['Dossier de campaña en Google Docs', 'Dossier visual compartido en Canva', 'Paleta y lecturas denotativas/connotativas'],
     next: ['Acordar la jerarquía final entre concepto y frase de campaña.', 'Revisar que cada signo visual respalde el mensaje elegido.', 'Cerrar una lámina de síntesis con paleta, tipografía y aplicaciones.'],
     links: [
-      { label: 'Ver dossier en el archivo', href: '/signex/documentos' },
+      { label: 'Ver dossier en el archivo', href: '/signex/documentos?doc=dossier-semiotica' },
       { label: 'Abrir dossier visual en Canva', href: 'https://www.canva.com/d/DPshHPC99XOcnTT', external: true },
     ],
     tone: 'sage', mark: 'S',
@@ -39,7 +39,7 @@ const subjects = [
     evidence: ['Guion y materiales de preproducción', 'Presentación visual del proyecto', 'Propuesta narrativa para un spot horizontal'],
     next: ['Confirmar producto, utilería y detalles que requieren verificación.', 'Aprobar guion y storyboard con el equipo antes de rodar.', 'Completar rodaje, edición y adaptaciones; publicar el corte cuando esté revisado.'],
     links: [
-      { label: 'Ver guion en el archivo', href: '/signex/documentos' },
+      { label: 'Ver guion en el archivo', href: '/signex/documentos?doc=guion-spot' },
       { label: 'Consultar preproducción', href: 'https://docs.google.com/document/d/1v18L_AY2HYK_OWNNb3KuMcolIU1U94EP/edit', external: true },
     ],
     tone: 'ochre', mark: 'Na',
@@ -104,7 +104,7 @@ export default function SignexSubjectsPage() {
 
       <section className="subject-digital container">
         <div className="subject-digital-tag">ACTIVIDAD COMPLEMENTARIA</div>
-        <div><span className="subject-index">HERRAMIENTAS DIGITALES</span><h2>La propuesta también<br /><em>vive en pantalla.</em></h2><p>Como extensión del proyecto se encuentran reunidas las piezas sociales y su justificación en Canva. Esta actividad aparece separada de las tres materias grupales para conservar el alcance que muestran los archivos.</p><Link href="/signex/documentos">Consultar piezas sociales y presentaciones <Icon name="ArrowUpRight" size={15} /></Link></div>
+        <div><span className="subject-index">HERRAMIENTAS DIGITALES</span><h2>La propuesta también<br /><em>vive en pantalla.</em></h2><p>Como extensión del proyecto se encuentran reunidas las piezas sociales y su justificación en Canva. Esta actividad aparece separada de las tres materias grupales para conservar el alcance que muestran los archivos.</p><Link href="/signex/documentos?doc=piezas-sociales">Consultar piezas sociales y presentaciones <Icon name="ArrowUpRight" size={15} /></Link></div>
         <div className="subject-digital-card"><small>PIEZAS SOCIALES · CANVA</small><strong>Una campaña<br />en distintos<br /><em>formatos.</em></strong><span>Archivo visual editable</span><a href="https://www.canva.com/d/3zCKKkyzrcLojcz" target="_blank" rel="noreferrer">Abrir Canva <Icon name="ArrowUpRight" size={14} /></a></div>
       </section>
 

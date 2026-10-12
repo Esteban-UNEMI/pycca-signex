@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Icon } from '@/components/icon';
 import { withBasePath } from '@/lib/site-path';
@@ -73,6 +73,10 @@ const filters = ['Todos', 'Documento', 'Presentación', 'Canva'] as const;
 export function SignexDocumentLibrary() {
   const [filter, setFilter] = useState<(typeof filters)[number]>('Todos');
   const [activeId, setActiveId] = useState(documents[0].id);
+  useEffect(() => {
+    const requestedId = new URLSearchParams(window.location.search).get('doc');
+    if (requestedId && documents.some((document) => document.id === requestedId)) setActiveId(requestedId);
+  }, []);
   const visibleDocuments = useMemo(
     () => documents.filter((document) => filter === 'Todos' || document.type === filter),
     [filter],
