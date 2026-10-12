@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const revealTargets = [
   '.service-strip',
@@ -24,6 +25,8 @@ const revealTargets = [
 ].join(',');
 
 export function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (reduceMotion.matches || !('IntersectionObserver' in window)) return;
@@ -47,9 +50,8 @@ export function ScrollReveal() {
 
     return () => {
       observer.disconnect();
-      document.documentElement.classList.remove('motion-ready');
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
