@@ -56,6 +56,10 @@ npm run dev:mobile
 
 Abre `http://192.168.1.11:3000` en el navegador del teléfono (IP local verificada durante esta sesión; puede cambiar). Mantén encendida la computadora y el servidor en ejecución. Si Windows solicita acceso, permite Node.js en la red privada. Para abrir desde otras redes se necesita publicar el proyecto.
 
+### Instalar la web en el celular
+
+La publicación HTTPS incluye manifiesto e íconos de aplicación, registro de service worker y una pantalla de respaldo sin conexión. En Android, abre el sitio y usa **Instalar aplicación** o **Añadir a pantalla principal** desde el menú del navegador. En iPhone, abre el sitio en Safari y usa **Compartir → Añadir a pantalla de inicio**. La tienda sigue siendo una demo: instalarla no conecta Supabase ni sincroniza los datos locales entre dispositivos.
+
 ## Administración personalizable
 
 El panel `/admin` permite:
@@ -69,6 +73,8 @@ El panel `/admin` permite:
 - Descargar un respaldo JSON y exportar inventario, precios y pedidos.
 
 La persistencia local está centralizada en `lib/local-repository.ts`, con sincronización entre pestañas del mismo origen. No requiere credenciales ni conexión a Supabase todavía. Los datos de `localhost` y la IP de red pertenecen a orígenes distintos; cada navegador mantiene su propia demo. No hay autenticación efectiva en `/admin`: los usuarios y roles son registros académicos, no cuentas de acceso.
+
+El resumen del panel indica este modo local y permite abrir Configuración para revisar el estado de conexión.
 
 Cuando se conecte Supabase, aplicar `supabase/schema.sql` y después `supabase/admin-extension.sql` en un proyecto preparado, implementar repositorios autenticados, mapear los identificadores locales a UUID y ejecutar checkout/inventario con una transacción de base de datos. Las credenciales del servidor no deben ir en variables `NEXT_PUBLIC_*`. El esquema se ha preparado pero no se ha ejecutado en una base de datos remota.
 
@@ -88,3 +94,4 @@ La comprobación del flujo está en `output/verify-shopping.cjs`. Los favoritos 
 ## Espacio Bebés
 
 La portada destaca `/bebes`, también disponible en `/categoria/bebes`. Incluye cuatro cunas y cuatro productos de textiles, baño y paseo, con ilustraciones SVG propias y precios académicos. La colección puede editarse en Admin. La migración `pycca-baby-collection-v1` añade únicamente los nuevos registros a los catálogos locales existentes; conserva las ediciones y no repone productos eliminados después de la actualización. Verificación: `output/verify-baby.cjs`.
+

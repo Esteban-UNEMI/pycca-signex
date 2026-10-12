@@ -395,3 +395,10 @@ em { font-family:inherit; font-style:normal; font-weight:700; }
   .category-hero-image { min-height: inherit; }
 }
 
+.data-status-card { align-items: center; display: flex; gap: 22px; justify-content: space-between; margin-bottom: 20px; }
+.data-status-card h3 { align-items: center; display: flex; gap: 9px; margin: 0 0 7px; }
+.data-status-card h3 svg { color: var(--admin-brand); flex: 0 0 auto; }
+.data-status-card p { color: #687571; font-size: 11px; line-height: 1.6; margin: 0; max-width: 760px; }
+@media (max-width: 700px) { .data-status-card { align-items: flex-start; flex-direction: column; gap: 14px; } }
+
+

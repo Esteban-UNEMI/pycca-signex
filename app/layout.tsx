@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Poppins } from 'next/font/google';
+import { withBasePath } from '@/lib/site-path';
+import { ServiceWorkerRegister } from '@/components/service-worker-register';
 const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600'], display: 'swap', variable: '--font-poppins' });
 
 export const metadata: Metadata = {
@@ -11,7 +13,19 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-      <body className={poppins.variable}>{children}</body>
+      <head>
+        <link rel="manifest" href={withBasePath('/manifest.webmanifest')} />
+        <meta name="theme-color" content="#00539f" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href={withBasePath('/icons/pycca-192.svg')} />
+      </head>
+      <body className={poppins.variable}>
+        <ServiceWorkerRegister />
+        {children}
+      </body>
     </html>
   );
 }
+
