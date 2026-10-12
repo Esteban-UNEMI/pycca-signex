@@ -110,7 +110,7 @@ export function SignexDocumentLibrary() {
             <p>Consulta los documentos que acompañan el desarrollo de la campaña para PYCCA Bebé. Los archivos de Google Docs y las presentaciones se pueden revisar aquí; Canva conserva los enlaces a sus versiones visuales editables.</p>
             <div className="signex-library-count"><strong>10</strong><span>materiales del equipo<br />reunidos para revisión docente</span></div>
           </div>
-          <aside className="signex-library-note"><span>ARCHIVO ACADÉMICO</span><strong>Proceso, decisiones<br />y entregables</strong><p>De la investigación y la semiótica a la narrativa audiovisual y las piezas digitales.</p><Link href="/signex#proceso">Conocer el proceso <Icon name="ArrowRight" size={16} /></Link></aside>
+          <aside className="signex-library-note"><span>ARCHIVO ACADÉMICO</span><strong>Proceso, decisiones<br />y entregables</strong><p>De la investigación y la semiótica a la narrativa audiovisual y las piezas digitales.</p><Link href="/signex/materias">Ver el recorrido por materias <Icon name="ArrowRight" size={16} /></Link><Link href="/signex#proceso">Conocer el proceso <Icon name="ArrowRight" size={16} /></Link></aside>
         </div>
       </section>
 
