@@ -1,0 +1,116 @@
+.footer-documents-link { margin-top:9px; }
+.signex-archive-link { align-items:center; background:#53654f; border:1px solid #53654f; border-radius:10px; color:white; display:flex; justify-content:space-between; margin:0 0 17px; padding:19px 22px; transition:background .2s,transform .2s; }
+.signex-archive-link:hover { background:#394b3b; transform:translateY(-2px); }
+.signex-archive-link span { display:grid; gap:5px; }
+.signex-archive-link small { color:#dce6d6; font-size:8px; letter-spacing:.14em; }
+.signex-archive-link strong { font:500 17px var(--font-poppins),sans-serif; }
+.signex-archive-link em { color:rgba(255,255,255,.75); font-size:10px; font-style:normal; }
+.signex-footer { background:#28352e; color:#fff; }
+.signex-footer > .container { align-items:center; display:flex; flex-wrap:wrap; gap:18px 30px; justify-content:space-between; min-height:74px; padding-bottom:14px; padding-top:14px; }
+.signex-footer a { align-items:center; color:rgba(255,255,255,.83); display:inline-flex; font-size:10px; gap:7px; }
+.signex-footer a:hover { color:#fff; }
+.signex-footer span { color:rgba(255,255,255,.55); font-size:9px; }
+.signex-library { background:#fbfaf7; color:#25332f; min-height:100vh; }
+.signex-library-hero { background:#f1eadf; }
+.signex-library-hero-grid { align-items:center; display:grid; gap:9vw; grid-template-columns:1.1fr .7fr; min-height:390px; padding-bottom:55px; padding-top:55px; }
+.signex-library-hero h1,.signex-library-heading h2 { color:#293a32; font:500 clamp(42px,6vw,70px)/1.03 var(--font-poppins),sans-serif; letter-spacing:-.065em; margin:19px 0 17px; }
+.signex-library-hero h1 em,.signex-library-heading h2 em { color:#6c7d66; font-style:normal; }
+.signex-library-hero > .container > div > p { color:#67736c; font-size:13px; line-height:1.85; margin:0; max-width:640px; }
+.signex-library-count { align-items:center; color:#67746a; display:flex; gap:13px; margin-top:25px; }
+.signex-library-count strong { color:#53654f; font:500 40px var(--font-poppins),sans-serif; letter-spacing:-.06em; }
+.signex-library-count span { font-size:9px; line-height:1.5; }
+.signex-library-note { background:#53654f; border-radius:10px; color:#fff; padding:26px; }
+.signex-library-note > span { color:#dce6d6; font-size:8px; letter-spacing:.15em; }
+.signex-library-note > strong { display:block; font:500 25px/1.2 var(--font-poppins),sans-serif; letter-spacing:-.04em; margin:17px 0 10px; }
+.signex-library-note p { color:rgba(255,255,255,.76); font-size:10px; line-height:1.7; margin:0 0 20px; }
+.signex-library-note a { align-items:center; color:#fff; display:inline-flex; font-size:9px; font-weight:600; gap:8px; }
+.signex-library-main { padding-bottom:78px; padding-top:66px; }
+.signex-library-heading { align-items:flex-end; display:flex; gap:35px; justify-content:space-between; margin-bottom:28px; }
+.signex-library-heading h2 { font-size:clamp(34px,4.2vw,53px); margin:10px 0 0; }
+.signex-library-heading > p { color:#748078; font-size:11px; line-height:1.8; margin:0 0 4px; max-width:340px; }
+.signex-library-filters { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:15px; }
+.signex-library-filters button { align-items:center; background:#fff; border:1px solid #e7e6de; border-radius:24px; color:#66736a; cursor:pointer; display:flex; font:500 10px var(--font-poppins),sans-serif; gap:9px; min-height:37px; padding:0 13px; }
+.signex-library-filters button span { color:#8b958d; font-size:8px; }
+.signex-library-filters button:hover,.signex-library-filters button.active { background:#53654f; border-color:#53654f; color:white; }
+.signex-library-filters button.active span,.signex-library-filters button:hover span { color:#dce6d6; }
+.signex-library-layout { align-items:flex-start; display:grid; gap:16px; grid-template-columns:minmax(250px,.65fr) minmax(0,1.35fr); }
+.signex-library-list { background:#fff; border:1px solid #e8e7df; border-radius:10px; max-height:780px; overflow:auto; padding:6px; }
+.signex-library-list button { align-items:center; background:transparent; border:0; border-bottom:1px solid #f0efe9; color:inherit; cursor:pointer; display:flex; gap:11px; min-height:68px; padding:11px 10px; text-align:left; width:100%; }
+.signex-library-list button:last-child { border-bottom:0; }
+.signex-library-list button:hover,.signex-library-list button.active { background:#f3f4ef; border-radius:7px; }
+.signex-library-list-number { align-items:center; background:#f4f3ee; border-radius:50%; color:#7f8b7c; display:flex; flex:0 0 30px; font:10px 'DM Mono',monospace; height:30px; justify-content:center; width:30px; }
+.signex-library-list button.active .signex-library-list-number { background:#53654f; color:white; }
+.signex-library-list-copy { display:grid; flex:1; gap:4px; min-width:0; }
+.signex-library-list-copy small { color:#879187; font-size:8px; }
+.signex-library-list-copy strong { color:#36463d; font:500 10px/1.45 var(--font-poppins),sans-serif; }
+.signex-library-list button > svg { color:#82907f; flex:0 0 auto; }
+.signex-library-viewer { background:#fff; border:1px solid #e8e7df; border-radius:10px; min-width:0; overflow:hidden; padding:18px; }
+.signex-library-viewer-head { align-items:flex-start; display:flex; gap:15px; justify-content:space-between; }
+.signex-library-viewer-head > div > span { color:#849084; font-size:8px; letter-spacing:.08em; text-transform:uppercase; }
+.signex-library-viewer-head h3 { color:#334239; font:500 clamp(16px,2vw,22px)/1.3 var(--font-poppins),sans-serif; letter-spacing:-.035em; margin:6px 0 0; }
+.signex-library-viewer-head > a { align-items:center; color:#53654f; display:inline-flex; flex:0 0 auto; font-size:9px; font-weight:600; gap:6px; padding:5px 0; }
+.signex-library-summary { color:#778178; font-size:9px; line-height:1.65; margin:8px 0 13px; }
+.signex-document-frame { background:#f5f4ef; border:1px solid #e9e8e0; border-radius:6px; display:block; height:min(72vh,760px); min-height:520px; width:100%; }
+.signex-external-preview { align-items:flex-start; background:#f1f0eb; border-radius:7px; display:flex; flex-direction:column; justify-content:center; min-height:520px; padding:clamp(25px,5vw,65px); }
+.signex-external-preview-mark { align-items:center; background:#53654f; border-radius:50%; color:white; display:flex; font:500 24px var(--font-poppins),sans-serif; height:48px; justify-content:center; width:48px; }
+.signex-external-preview > span { color:#80907e; font-size:8px; letter-spacing:.14em; margin-top:22px; }
+.signex-external-preview h4 { color:#34443b; font:500 clamp(19px,3vw,30px)/1.25 var(--font-poppins),sans-serif; letter-spacing:-.04em; margin:10px 0; max-width:450px; }
+.signex-external-preview p { color:#778078; font-size:10px; line-height:1.8; margin:0 0 19px; max-width:500px; }
+.signex-library-viewer-foot { align-items:center; color:#879088; display:flex; font-size:8px; justify-content:space-between; padding-top:12px; }
+.signex-library-viewer-foot a { color:#53654f; font-weight:600; }
+.signex-library-disclosure { background:#edf0e8; border-radius:8px; margin-top:17px; padding:17px 19px; }
+.signex-library-disclosure strong { color:#4d604d; font:500 11px var(--font-poppins),sans-serif; }
+.signex-library-disclosure p { color:#758075; font-size:9px; line-height:1.7; margin:6px 0 0; }
+@media(max-width:900px){.signex-library-hero-grid{gap:5vw;grid-template-columns:1fr .75fr}.signex-library-layout{grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr)}.signex-document-frame{min-height:450px}}
+@media(max-width:700px){.signex-archive-link{align-items:flex-start;padding:16px}.signex-archive-link strong{font-size:14px}.signex-archive-link em{font-size:9px}.signex-footer>.container{align-items:flex-start;flex-direction:column;gap:11px;padding-bottom:20px;padding-top:20px}.signex-library-hero-grid{grid-template-columns:1fr;gap:27px;padding-bottom:37px;padding-top:39px}.signex-library-hero h1{font-size:clamp(42px,12vw,56px)}.signex-library-hero>.container>div>p{font-size:11px}.signex-library-note{padding:21px}.signex-library-note>strong{font-size:21px}.signex-library-main{padding-bottom:52px;padding-top:43px}.signex-library-heading{align-items:flex-start;flex-direction:column;gap:11px;margin-bottom:20px}.signex-library-heading h2{font-size:37px}.signex-library-heading>p{font-size:10px}.signex-library-layout{grid-template-columns:1fr}.signex-library-list{display:flex;gap:6px;max-height:none;overflow-x:auto;padding:5px;scroll-snap-type:x proximity}.signex-library-list button{border:1px solid #eeede7;border-radius:7px;flex:0 0 min(76vw,265px);min-height:76px;scroll-snap-align:start}.signex-library-list button:last-child{border-bottom:1px solid #eeede7}.signex-library-viewer{padding:13px}.signex-library-viewer-head{flex-direction:column;gap:5px}.signex-library-viewer-head h3{font-size:17px}.signex-document-frame{height:70dvh;min-height:430px}.signex-external-preview{min-height:370px;padding:25px}.signex-library-disclosure{padding:15px}.signex-library-disclosure p{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.signex-archive-link{transition:none}}
+@media(max-width:900px){.signex-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signex-reading-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.signex-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.signex-learning-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.signex-anchor-nav{margin-left:16px;margin-right:16px;width:calc(100% - 32px)}.signex-process,.signex-learning{padding-bottom:55px;padding-top:51px}.signex-process-heading,.signex-storyboard-heading,.signex-learning-heading,.signex-gallery-heading{align-items:flex-start;flex-direction:column;gap:13px;padding:26px 0 20px}.signex-process-heading h2,.signex-storyboard-heading h2,.signex-learning-heading h2,.signex-gallery-heading h2{font-size:39px}.signex-process-heading>p,.signex-storyboard-heading>p,.signex-learning-heading>p,.signex-gallery-heading>p{font-size:11px}.signex-process-grid{gap:8px}.signex-process-grid article{min-height:185px;padding:15px}.signex-process-grid article>b{margin-bottom:14px}.signex-process-grid h3{font-size:13px}.signex-process-grid p{font-size:9px}.signex-message-variants{padding:17px}.signex-message-variants p{font-size:11px}.signex-reading-grid{gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}.signex-reading-grid article{padding-right:7px}.signex-storyboard{padding:52px 0}.signex-storyboard-grid{gap:9px;grid-template-columns:repeat(2,minmax(0,1fr))}.signex-beat summary{padding:0 11px 13px}.signex-beat summary>strong{font-size:13px}.signex-beat-label{margin-top:11px}.signex-beat-detail{padding:11px}.signex-beat-detail>p{font-size:9px}.signex-sound-note{gap:8px;grid-template-columns:1fr;padding:16px}.signex-sound-note p{font-size:9px}.signex-gallery-section{padding:52px 0}.signex-gallery-grid{gap:8px;grid-template-columns:repeat(2,minmax(0,1fr))}.signex-gallery-card-copy{gap:6px;padding:10px}.signex-gallery-card-copy>strong{font-size:10px;min-height:40px}.signex-gallery-card-copy>span{font-size:8px}.signex-gallery-zoom{height:28px;opacity:1;transform:none;width:28px}.signex-gallery-groups{font-size:7px;gap:8px}.signex-piece-dialog{border-radius:12px;max-height:94dvh;width:calc(100vw - 20px)}.signex-piece-dialog-inner{grid-template-columns:1fr}.signex-piece-preview{max-height:52dvh;min-height:0;padding:15px}.signex-piece-preview img{max-height:48dvh}.signex-piece-info{padding:21px}.signex-piece-info h3{font-size:23px;margin:12px 0 17px}.signex-piece-info p{font-size:9px}.signex-piece-info .signex-primary{margin-top:15px;width:100%}.signex-learning-grid{gap:8px;grid-template-columns:repeat(2,minmax(0,1fr))}.signex-learning-grid article{min-height:160px;padding:14px}.signex-learning-grid h3{font-size:11px}.signex-learning-grid p{font-size:8px}.signex-credits{align-items:flex-start;flex-direction:column;padding:18px}.signex-credits h3{font-size:15px}.signex-credits> a{margin-top:5px}.signex-identity-grid{padding-top:26px}}
+@media(prefers-reduced-motion:reduce){.signex-anchor-nav a,.signex-beat-image img,.signex-beat-more i,.signex-gallery-filters button,.signex-gallery-open,.signex-gallery-image img,.signex-gallery-zoom{scroll-behavior:auto;transition:none!important}.signex-gallery-open:hover,.signex-beat summary:hover .signex-beat-image img{transform:none}}
+
+@keyframes pycca-rise-in {
+  from { opacity:0; transform:translateY(16px); }
+  to { opacity:1; transform:translateY(0); }
+}
+@keyframes pycca-image-in {
+  from { opacity:0; transform:translateY(12px) scale(.985); }
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+@media (hover:hover) and (pointer:fine) {
+  .category-card:hover,.product-card:hover { transform:translateY(-4px); box-shadow:0 16px 34px rgba(28,42,34,.09); }
+  .service-grid > div:hover { transform:translateY(-2px); }
+  .icon-button:hover,.favorite-button:hover { transform:scale(1.06); }
+  .button:hover { box-shadow:0 8px 20px color-mix(in srgb,var(--brand) 18%,transparent); }
+}
+@media (max-width:700px) {
+  .storefront .hero-copy h1 { font-size:clamp(36px,10vw,44px); letter-spacing:-.065em; }
+  .storefront .section-heading h2,.storefront .department-rail-heading h2 { line-height:1.12; }
+  .product-card:hover { transform:none; box-shadow:none; }
+  .quick-add { transition:background-color .2s ease; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .hero-copy,.hero-visual,.hero-copy .hero-eyebrow,.hero-copy h1,.hero-copy > p,.hero-copy .hero-actions,.hero-copy .hero-trust { animation:none; }
+  .motion-ready [data-reveal],.motion-ready [data-reveal].is-revealed { opacity:1; transform:none; transition:none; will-change:auto; }
+  .signex-primary svg,.baby-promo-cta svg { transition:none; }
+}
+
+/* Use the available desktop width instead of leaving ultrawide screens half empty. */
+@media (min-width: 1500px) {
+  .container { width: min(2000px, calc(100% - clamp(48px, 6vw, 144px))); }
+  .hero { min-height: clamp(500px, 28vw, 640px); }
+  .hero-visual { height: clamp(500px, 28vw, 640px); }
+  .hero-copy { padding: clamp(38px, 3vw, 68px); }
+  .hero-copy h1 { font-size: clamp(64px, 4vw, 92px); }
+  .category-hero { min-height: clamp(380px, 18vw, 480px); }
+  .category-hero-image { min-height: inherit; }
+}
+
+.data-status-card { align-items: center; display: flex; gap: 22px; justify-content: space-between; margin-bottom: 20px; }
+.data-status-card h3 { align-items: center; display: flex; gap: 9px; margin: 0 0 7px; }
+.data-status-card h3 svg { color: var(--admin-brand); flex: 0 0 auto; }
+.data-status-card p { color: #687571; font-size: 11px; line-height: 1.6; margin: 0; max-width: 760px; }
+@media (max-width: 700px) { .data-status-card { align-items: flex-start; flex-direction: column; gap: 14px; } }
+
+
+
+
