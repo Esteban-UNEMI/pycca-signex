@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Icon, type IconName } from '@/components/icon';
+import { withBasePath } from '@/lib/site-path';
 
 export const metadata: Metadata = {
   title: 'Experiencia digital · SIGNEX × PYCCA Bebé',
@@ -39,7 +40,7 @@ export default function SignexDigitalExperiencePage() {
       <section className="digital-hero">
         <div className="container digital-hero-grid">
           <div className="digital-hero-copy"><span className="digital-eyebrow"><i /> DISEÑO · DESARROLLO · EXPERIENCIA</span><h1>Una idea de campaña,<br /><em>convertida en experiencia.</em></h1><p>Así construimos el prototipo web de SIGNEX para PYCCA Bebé: una extensión digital del proyecto integrador que combina identidad, comunicación y tecnología.</p><div className="digital-hero-actions"><a className="digital-button" href="#construccion">Recorrer la experiencia <Icon name="ArrowDown" size={16} /></a><Link href="/bebes">Visitar el espacio Bebés <Icon name="ArrowUpRight" size={15} /></Link></div><small>PROYECTO UNIVERSITARIO · PRODUCCIÓN MULTIMEDIA Y AUDIOVISUAL · UNEMI</small></div>
-          <div className="digital-hero-art" aria-label="Diagrama conceptual de una experiencia digital construida desde la campaña"><div className="digital-art-orbit orbit-a"/><div className="digital-art-orbit orbit-b"/><span className="digital-art-tag tag-top">IDEA / CAMPAÑA</span><span className="digital-art-tag tag-bottom">EXPERIENCIA WEB</span><div className="digital-browser"><div className="digital-browser-top"><i/><i/><i/><span>signex · bebé</span></div><div className="digital-browser-visual"><div className="digital-browser-copy"><small>UN ESPACIO PARA RECIBIR</small><strong>Crecer<br/>con calma.</strong><i/></div><div className="digital-browser-photo"/><div className="digital-browser-chip">SIGNEX × PYCCA</div></div><div className="digital-browser-cards"><i/><i/><i/></div></div><div className="digital-art-caption"><span>01 — 04</span><span>DEL CONCEPTO A LA INTERFAZ</span></div></div>
+          <div className="digital-hero-art" aria-label="Diagrama conceptual de una experiencia digital construida desde la campaña"><div className="digital-art-orbit orbit-a"/><div className="digital-art-orbit orbit-b"/><span className="digital-art-tag tag-top">IDEA / CAMPAÑA</span><span className="digital-art-tag tag-bottom">EXPERIENCIA WEB</span><div className="digital-browser"><div className="digital-browser-top"><i/><i/><i/><span>signex · bebé</span></div><div className="digital-browser-visual"><div className="digital-browser-copy"><small>UN ESPACIO PARA RECIBIR</small><strong>Crecer<br/>con calma.</strong><i/></div><div className="digital-browser-photo" style={{ backgroundImage: `url('${withBasePath('/signex/campaign/escena-03-cuna-interior.jpg')}')` }}/><div className="digital-browser-chip">SIGNEX × PYCCA</div></div><div className="digital-browser-cards"><i/><i/><i/></div></div><div className="digital-art-caption"><span>01 — 04</span><span>DEL CONCEPTO A LA INTERFAZ</span></div></div>
         </div>
       </section>
 

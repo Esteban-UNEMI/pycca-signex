@@ -29,7 +29,7 @@
 .digital-browser-copy small { color:#84917c; font-size:6px; letter-spacing:.11em; }
 .digital-browser-copy strong { color:#334239; font:500 clamp(24px,3.2vw,39px)/1.12 var(--font-poppins),sans-serif; letter-spacing:-.07em; margin-top:12px; }
 .digital-browser-copy i { background:#e87969; border-radius:4px; height:3px; margin-top:18px; width:32px; }
-.digital-browser-photo { background:url('/signex/campaign/escena-03-cuna-interior.jpg') center/cover no-repeat; height:100%; position:absolute; right:0; top:0; width:51%; }
+.digital-browser-photo { background-color:#e8e6db; background-position:center; background-size:cover; background-repeat:no-repeat; height:100%; position:absolute; right:0; top:0; width:51%; }
 .digital-browser-chip { background:rgba(255,255,255,.87); border-radius:20px; bottom:13px; color:#596953; font-size:6px; letter-spacing:.1em; padding:7px 9px; position:absolute; right:12px; }
 .digital-browser-cards { display:grid; gap:9px; grid-template-columns:repeat(3,1fr); padding:12px 16px; }
 .digital-browser-cards i { background:linear-gradient(145deg,#ede9dd,#e5ecdf); border-radius:5px; height:43px; }
