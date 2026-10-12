@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+.env.local
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+output/*.tar.gz
+output/*.zip
+output/*.ps1
+output/*campaign.py
+output/campaign.css
+.vercel
+output/playwright
+.playwright-cli
+npm-debug.log*
